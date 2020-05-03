@@ -1,0 +1,41 @@
+<html lang="tr">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+
+
+
+	<div id="myDiv">
+		<img id="cl" src="", width="256", height="256">
+	</div>
+
+	<img id="br" src="bw.png" width="256" height="190" title="Roll">
+	<label id="lbl">Empty</label>
+	<button id="settings">Settings</button>
+	<button id="roll" onclick="deneme()">Roll</button>
+	<script>
+		var arr = ["Barley", "Bo", "Brock", "Bull", "Colt", "Darryl", "Dinamike", "Jessie", "Mortis", "Nita", "Pam", "Penny", "Piper", "Poco", "Primo", "Shelly", "Tara"]
+
+		function shuffle(array) {
+  			array.sort(() => Math.random() - 0.5);
+		}
+
+		function deneme() {
+			for (var i = 0; i < arr.length; i++) 
+			{
+				shuffle(arr);
+				var rndm = arr[Math.floor(Math.random() * arr.length)];	
+				console.table(arr);	
+				var lbl = document.getElementById("lbl").innerHTML = rndm;
+				var mb = document.getElementById("cl").src = "RENDERS V2/" + rndm + ".png";
+			}
+		}
+	</script>
+	
+</body>
+
+</html>
